@@ -283,7 +283,6 @@ public void OnPluginStart()
 	RegConsoleCmd("sm_sltuto", Command_Tutorial);
 	RegConsoleCmd("sm_sf2tutorial", Command_Tutorial);
 	RegConsoleCmd("sm_sf2tuto", Command_Tutorial);
-	RegConsoleCmd("sm_slupdate", Command_Update);
 	RegConsoleCmd("sm_slpack", Command_Pack);
 	RegConsoleCmd("sm_sf2pack", Command_Pack);
 	RegConsoleCmd("sm_slnextpack", Command_NextPack);
@@ -293,7 +292,6 @@ public void OnPluginStart()
 	RegConsoleCmd("sm_slghost", Command_GhostMode);
 	RegConsoleCmd("sm_slhelp", Command_Help);
 	RegConsoleCmd("sm_slsettings", Command_Settings);
-	RegConsoleCmd("sm_slcredits", Command_Credits);
 	RegConsoleCmd("sm_slviewbosslist", Command_BossList);
 	RegConsoleCmd("sm_slbosslist", Command_BossList);
 	RegConsoleCmd("sm_slafk", Command_NoPoints);
@@ -512,17 +510,6 @@ static Action Command_MenuViewBob(int client,int args)
 	return Plugin_Handled;
 }
 
-static Action Command_Credits(int client,int args)
-{
-	if (!g_Enabled)
-	{
-		return Plugin_Continue;
-	}
-
-	DisplayMenu(g_MenuCredits, client, MENU_TIME_FOREVER);
-	return Plugin_Handled;
-}
-
 static Action Command_BossList(int client,int args)
 {
 	if (!g_Enabled)
@@ -738,16 +725,6 @@ static Action Command_Tutorial(int client,int args)
 		return Plugin_Continue;
 	}
 	//Tutorial_HandleClient(client);
-	return Plugin_Handled;
-}
-
-static Action Command_Update(int client, int args)
-{
-	if (!g_Enabled)
-	{
-		return Plugin_Continue;
-	}
-	DisplayMenu(g_MenuUpdate, client, 30);
 	return Plugin_Handled;
 }
 

@@ -18,13 +18,6 @@ Handle g_MenuHelpClasinfo;
 Handle g_MenuHelpGhostMode;
 Handle g_MenuSettings;
 Handle g_MenuSettingsFlashlightTemp1;
-Handle g_MenuCredits;
-Handle g_MenuCredits1;
-Handle g_MenuCredits2;
-Handle g_MenuCredits3;
-Handle g_MenuCredits4;
-Handle g_MenuCredits5;
-Handle g_MenuUpdate;
 
 #include "sf2/playergroups/menus.sp"
 #include "sf2/pvp/menus.sp"
@@ -49,8 +42,6 @@ void SetupMenus()
 	FormatEx(buffer, sizeof(buffer), "%t (!slnextpack)", "SF2 Boss Next Pack Menu Title");
 	AddMenuItem(g_MenuMain, "0", buffer);
 	FormatEx(buffer, sizeof(buffer), "%t (!slsettings)", "SF2 Settings Menu Title");
-	AddMenuItem(g_MenuMain, "0", buffer);
-	strcopy(buffer, sizeof(buffer), "Credits (!slcredits)");
 	AddMenuItem(g_MenuMain, "0", buffer);
 	FormatEx(buffer, sizeof(buffer), "%t (!slbosslist)", "SF2 Boss View On List Title");
 	AddMenuItem(g_MenuMain, "0", buffer);
@@ -166,117 +157,6 @@ void SetupMenus()
 	AddMenuItem(g_MenuSettingsFlashlightTemp1, "8", "9000 Kelvin");
 	AddMenuItem(g_MenuSettingsFlashlightTemp1, "9", "10000 Kelvin");
 	SetMenuExitBackButton(g_MenuSettingsFlashlightTemp1, true);
-
-	g_MenuCredits = CreateMenu(Menu_Credits);
-
-	FormatEx(buffer, sizeof(buffer), "Credits\n");
-	StrCat(buffer, sizeof(buffer), "Coders: KitRifty, Kenzzer, Mentrillum, The Gaben\n");
-	StrCat(buffer, sizeof(buffer), "Mark J. Hadley - The creator of the Slender game\n");
-	StrCat(buffer, sizeof(buffer), "Mark Steen - Compositing the intro music\n");
-	StrCat(buffer, sizeof(buffer), "Toby Fox - Compositing The World Revolving\n");
-	StrCat(buffer, sizeof(buffer), "Mammoth Mogul - For being a GREAT test subject\n");
-	StrCat(buffer, sizeof(buffer), "Egosins - For offering to host this publicly\n");
-
-	SetMenuTitle(g_MenuCredits, buffer);
-	AddMenuItem(g_MenuCredits, "0", "Next");
-	AddMenuItem(g_MenuCredits, "1", "Back");
-
-	g_MenuCredits1 = CreateMenu(Menu_Credits1);
-
-	FormatEx(buffer, sizeof(buffer), "Credits\n");
-	StrCat(buffer, sizeof(buffer), "Glubbable - For working on a ton of maps\n");
-	StrCat(buffer, sizeof(buffer), "Somberguy - Suggestions and support\n");
-	StrCat(buffer, sizeof(buffer), "Omi-Box - Materials, maps, current Slender Man model, and more\n");
-	StrCat(buffer, sizeof(buffer), "Narry Gewman - Imported first Slender Man model\n");
-	StrCat(buffer, sizeof(buffer), "Simply Delicious - For the awesome camera overlay\n");
-	StrCat(buffer, sizeof(buffer), "Jason278 -Page models");
-	StrCat(buffer, sizeof(buffer), "Dj-Rec0il - Running In the 90s Remix composer\n");
-
-	SetMenuTitle(g_MenuCredits1, buffer);
-	AddMenuItem(g_MenuCredits1, "0", "Next");
-	AddMenuItem(g_MenuCredits1, "1", "Back");
-
-	g_MenuCredits2 = CreateMenu(Menu_Credits2);
-
-	FormatEx(buffer, sizeof(buffer), "%tCredits\n \n", "SF2 Prefix");
-	StrCat(buffer, sizeof(buffer), "To all the peeps who alpha-tested this thing!\n \n");
-	StrCat(buffer, sizeof(buffer), "Tofu\n");
-	StrCat(buffer, sizeof(buffer), "Ace-Dashie\n");
-	StrCat(buffer, sizeof(buffer), "Hobbes\n");
-	StrCat(buffer, sizeof(buffer), "Diskein\n");
-	StrCat(buffer, sizeof(buffer), "111112oo\n");
-	StrCat(buffer, sizeof(buffer), "Incoheriant Chipmunk\n");
-	StrCat(buffer, sizeof(buffer), "Shrow\n");
-	StrCat(buffer, sizeof(buffer), "Liquid Vita\n");
-	StrCat(buffer, sizeof(buffer), "Pinkle D Lies\n");
-	StrCat(buffer, sizeof(buffer), "Ultimatefry\n \n");
-
-	SetMenuTitle(g_MenuCredits2, buffer);
-	AddMenuItem(g_MenuCredits2, "0", "Next");
-	AddMenuItem(g_MenuCredits2, "1", "Back");
-
-	g_MenuCredits3 = CreateMenu(Menu_Credits3);
-
-	FormatEx(buffer, sizeof(buffer), "%tCredits\n \n", "SF2 Prefix");
-	StrCat(buffer, sizeof(buffer), "Credits to all peeps who gave special round suggestions!\n \n");
-	StrCat(buffer, sizeof(buffer), "TehPlayer14\n");
-	StrCat(buffer, sizeof(buffer), "SirAnthony\n");
-	StrCat(buffer, sizeof(buffer), "DelcsXCritical\n");
-	StrCat(buffer, sizeof(buffer), "Gardevoid\n");
-	StrCat(buffer, sizeof(buffer), "Eile Mizer\n");
-	StrCat(buffer, sizeof(buffer), "DeadlyCreature\n");
-	StrCat(buffer, sizeof(buffer), "Average\n");
-	StrCat(buffer, sizeof(buffer), "FireHue\n");
-	StrCat(buffer, sizeof(buffer), "Spooky Pyro\n");
-	StrCat(buffer, sizeof(buffer), "Firedudeet\n \n");
-
-	SetMenuTitle(g_MenuCredits3, buffer);
-	AddMenuItem(g_MenuCredits3, "0", "Next");
-	AddMenuItem(g_MenuCredits3, "1", "Back");
-
-	g_MenuCredits4 = CreateMenu(Menu_Credits4);
-
-	FormatEx(buffer, sizeof(buffer), "%tCredits\n \n", "SF2 Prefix");
-	StrCat(buffer, sizeof(buffer), "Major special thanks to all official Modified server owners!\n \n");
-	StrCat(buffer, sizeof(buffer), "Demon Hamster Eating My Wafflez\n");
-	StrCat(buffer, sizeof(buffer), "Munt\n");
-	StrCat(buffer, sizeof(buffer), "KanP\n");
-	StrCat(buffer, sizeof(buffer), "SAXY GIBUS MAN\n");
-	StrCat(buffer, sizeof(buffer), "Fire\n");
-	StrCat(buffer, sizeof(buffer), "[NxN]Nameless\n");
-
-	SetMenuTitle(g_MenuCredits4, buffer);
-	AddMenuItem(g_MenuCredits4, "0", "Next");
-	AddMenuItem(g_MenuCredits4, "1", "Back");
-
-	g_MenuCredits5 = CreateMenu(Menu_Credits5);
-
-	FormatEx(buffer, sizeof(buffer), "%tCredits\n \n", "SF2 Prefix");
-	StrCat(buffer, sizeof(buffer), "And finally to all of these people that helped out this version one way or another!\n \n");
-	StrCat(buffer, sizeof(buffer), "Dookster\n");
-	StrCat(buffer, sizeof(buffer), "Spook\n");
-	StrCat(buffer, sizeof(buffer), "Rorek\n");
-	StrCat(buffer, sizeof(buffer), "Chillax\n");
-	StrCat(buffer, sizeof(buffer), "Staff from Disc-FF (EllieDear, Arrow Skye, tocks, and Pasta Stalin)\n");
-	StrCat(buffer, sizeof(buffer), "Basically everyone at Disc-FF\n");
-	StrCat(buffer, sizeof(buffer), "And you for playing this new way of SF2!\n \n");
-
-	SetMenuTitle(g_MenuCredits5, buffer);
-	AddMenuItem(g_MenuCredits5, "0", "Back");
-
-	g_MenuUpdate = CreateMenu(Menu_Update);
-	FormatEx(buffer, sizeof(buffer), "%tSlender Fortress\n \n", "SF2 Prefix");
-	StrCat(buffer, sizeof(buffer), "Coders: KitRifty, Kenzzer, Mentrillum, The Gaben\n");
-	StrCat(buffer, sizeof(buffer), "Version: ");
-	StrCat(buffer, sizeof(buffer), PLUGIN_VERSION);
-	StrCat(buffer, sizeof(buffer), "\n \n");
-	Format(buffer, sizeof(buffer), "%s%t\n",buffer,"SF2 Recent Changes");
-	Format(buffer, sizeof(buffer), "%s%t\n",buffer,"SF2 Change Log");
-	StrCat(buffer, sizeof(buffer), "\n \n");
-
-	SetMenuTitle(g_MenuUpdate, buffer);
-
-	AddMenuItem(g_MenuUpdate, "0", "Display main menu");
 
 	PvP_SetupMenus();
 }
@@ -466,10 +346,6 @@ static int Menu_Main(Handle menu, MenuAction action,int param1,int param2)
 				DisplayMenu(g_MenuSettings, param1, 30);
 			}
 			case 7:
-			{
-				DisplayMenu(g_MenuCredits, param1, MENU_TIME_FOREVER);
-			}
-			case 8:
 			{
 				DisplayBossList(param1);
 			}
@@ -809,44 +685,6 @@ static int Menu_BackButtonOnly(Handle menu, MenuAction action,int param1,int par
 			case 0:
 			{
 				DisplayMenu(g_MenuHelp, param1, 30);
-			}
-		}
-	}
-	return 0;
-}
-
-static int Menu_Credits(Handle menu, MenuAction action,int param1,int param2)
-{
-	if (action == MenuAction_Select)
-	{
-		switch (param2)
-		{
-			case 0:
-			{
-				DisplayMenu(g_MenuCredits1, param1, MENU_TIME_FOREVER);
-			}
-			case 1:
-			{
-				DisplayMenu(g_MenuMain, param1, 30);
-			}
-		}
-	}
-	return 0;
-}
-
-static int Menu_Credits1(Handle menu, MenuAction action,int param1,int param2)
-{
-	if (action == MenuAction_Select)
-	{
-		switch (param2)
-		{
-			case 0:
-			{
-				DisplayMenu(g_MenuCredits2, param1, MENU_TIME_FOREVER);
-			}
-			case 1:
-			{
-				DisplayMenu(g_MenuCredits, param1, MENU_TIME_FOREVER);
 			}
 		}
 	}
@@ -1356,85 +1194,6 @@ int Panel_SettingsViewBobbing(Handle menu, MenuAction action,int param1,int para
 	return 0;
 }
 
-static int Menu_Credits2(Handle menu, MenuAction action,int param1,int param2)
-{
-	if (action == MenuAction_Select)
-	{
-		switch (param2)
-		{
-			case 0:
-			{
-				DisplayMenu(g_MenuCredits3, param1, MENU_TIME_FOREVER);
-			}
-			case 1:
-			{
-				DisplayMenu(g_MenuCredits1, param1, MENU_TIME_FOREVER);
-			}
-		}
-	}
-	return 0;
-}
-static int Menu_Credits3(Handle menu, MenuAction action,int param1,int param2)
-{
-	if (action == MenuAction_Select)
-	{
-		switch (param2)
-		{
-			case 0:
-			{
-				DisplayMenu(g_MenuCredits4, param1, MENU_TIME_FOREVER);
-			}
-			case 1:
-			{
-				DisplayMenu(g_MenuCredits2, param1, MENU_TIME_FOREVER);
-			}
-		}
-	}
-	return 0;
-}
-static int Menu_Credits4(Handle menu, MenuAction action,int param1,int param2)
-{
-	if (action == MenuAction_Select)
-	{
-		switch (param2)
-		{
-			case 0:
-			{
-				DisplayMenu(g_MenuCredits5, param1, MENU_TIME_FOREVER);
-			}
-			case 1:
-			{
-				DisplayMenu(g_MenuCredits3, param1, MENU_TIME_FOREVER);
-			}
-		}
-	}
-	return 0;
-}
-static int Menu_Credits5(Handle menu, MenuAction action,int param1,int param2)
-{
-	if (action == MenuAction_Select)
-	{
-		switch (param2)
-		{
-			case 0:
-			{
-				DisplayMenu(g_MenuCredits4, param1, MENU_TIME_FOREVER);
-			}
-		}
-	}
-	return 0;
-}
-static int Menu_Update(Handle menu, MenuAction action,int param1,int param2)
-{
-	if (action == MenuAction_Select)
-	{
-		if (param2 == 0)
-		{
-			DisplayMenu(g_MenuMain, param1, 30);
-		}
-	}
-	return 0;
-}
 void DisplayQueuePointsMenu(int client)
 {
 	Handle menu = CreateMenu(Menu_QueuePoints);

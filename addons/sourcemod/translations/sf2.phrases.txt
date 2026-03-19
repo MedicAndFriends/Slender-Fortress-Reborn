@@ -315,15 +315,6 @@
 		"pt"	"Lista de comandos"
 	}
 
-	"SF2 Help Commands Description"
-	{
-		"en"	"!slender - Displays the main menu.\n!slnext - Displays a list of players showing who's next.\n!slghost - Displays the Ghost Mode menu.\n!slhelp - Shows the Help menu.\n!slcredits - Shows the awesome guys who helped with this mod."
-		"ru"	"!slender - Показать главное меню.\n!slnext - Показать следующих игроков в очереди.\n!slghost - Показать меню режима призрака.\n!slhelp - Показать меню помощи.\n!slcredits - Показать тех замечательных людей, кто помог с этим модом."
-		"fi"	"!slender - Näyttää päävalikon.\n!slnext - Näyttää listan seuraavista pelaajista.\n!slghost - Näyttää Haamu Tilan valikon.\n!slhelp - Näyttää ohjevalikon.\n!slcredits - Näyttää mahtavat henkilöt jotka auttoivat tämän pelimuodon kanssa."
-		"chi"	"!slender - 显示主菜单。\n!slnext - 显示列表谁是下一个玩家。\n!slghost - 显示幽灵模式菜单。\n!slhelp - 显示帮助菜单。\n!slcredits - 显示帮助制作此mod的人。"
-		"pt"	"!slender — exibe o menu principal.\n!slnext — exibe a fila de espera de quem vai jogar.\n!slghost — exibe o menu do modo fantasma.\n!slhelp — exibe o menu de ajuda.\n!slcredits — exibe os nomes de quem ajudou a desenvolver este modo."
-	}
-
 	"SF2 Help Ghost Mode Menu Title"
 	{
 		"en"	"What is Ghost Mode?"
@@ -1952,21 +1943,6 @@
 	{
 		"en"	"{lightblue}View bobbing is now disabled."
 		"pt"	"{lightblue}Agora, a arma não balança ao andar."
-	}
-
-	"SF2 Recent Changes"
-	{
-		"en"	"Recent Changes:"
-		"ru"	"Недавние изменения:"
-		"fi"	"Viimeaikaiset muutokset:"
-		"chi"	"最近改动："
-		"pt"	"Alterações recentes:"
-	}
-	
-	"SF2 Change Log"
-	{
-		"en"	"-Precached literally every boss key value\n-Removed certain backwards compatibility"
-		"pt"	"- Pré-carregamento de todos os valores-chave\nde chefões (literalmente)\n- Remoção de certas retrocompatibilidades"
 	}
 
 	"SF2 Smite player"

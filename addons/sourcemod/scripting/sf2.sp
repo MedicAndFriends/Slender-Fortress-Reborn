@@ -114,8 +114,6 @@ static const char g_PageCollectDuckSounds[][] =
 	"ambient/bumper_car_quack11.wav"
 };
 
-//Update
-bool g_SeeUpdateMenu[MAXTF2PLAYERS] = { false, ... };
 //Command
 bool g_PlayerNoPoints[MAXTF2PLAYERS] = { false, ... };
 bool g_AdminNoPoints[MAXTF2PLAYERS] = { false, ... };
@@ -3751,7 +3749,6 @@ public void OnClientDisconnect(int client)
 	delete message;
 	EndMessage();
 
-	g_SeeUpdateMenu[client] = false;
 	g_PlayerEscaped[client] = false;
 	g_PlayerNoPoints[client] = false;
 	g_AdminNoPoints[client] = false;

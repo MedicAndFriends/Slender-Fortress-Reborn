@@ -502,11 +502,6 @@ Action Event_PlayerSpawn(Handle event, const char[] name, bool dB)
 	{
 		g_LastVisibilityProcess[client] = GetGameTime();
 		ClientResetStatic(client);
-		if (!g_SeeUpdateMenu[client])
-		{
-			g_SeeUpdateMenu[client] = true;
-			DisplayMenu(g_MenuUpdate, client, 30);
-		}
 	}
 	if (!IsClientParticipating(client))
 	{
