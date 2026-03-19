@@ -710,23 +710,6 @@
 		"pt"	"{lightblue}Temperatura da lanterna definida para {1}%%."
 	}
 
-	"SF2 Ad Message 1"
-	{
-		"en"	"{dodgerblue}Slender Fortress Modified official Discord server: {lightblue}https://discord.gg/7Zz7RYTCC4{default}"
-		"ru"	"{dodgerblue}Официальный Discord сервер Slender Fortress Modified: {lightblue}https://discord.gg/7Zz7RYTCC4{default}"
-		"chi"	"{dodgerblue}Slender Fortress Modified官方Discord服务器：{lightblue}https://discord.gg/7Zz7RYTCC4{default}"
-		"pt"	"{dodgerblue}Servidor oficial do Slender Fortress Modified no Discord: {lightblue}https://discord.gg/7Zz7RYTCC4{default}"
-	}
-
-	"SF2 Ad Message 2"
-	{
-		"en"	"{dodgerblue}New to this gamemode? Type {lightblue}!slender{dodgerblue} in chat to open the main menu."
-		"ru"	"{dodgerblue}Незнакомы с режимом? Напишите {lightblue}!slender{dodgerblue} в чате, чтобы открыть главное меню."
-		"fi"	"{dodgerblue}Uusi tähän pelitilaan? Kirjoita {lightblue}!slender{dodgerblue} chattiin avataksesi päävalikon."
-		"chi"	"{dodgerblue}新玩这个模式？在聊天键入{lightblue}!slender{dodgerblue}来打开主菜单。"
-		"pt"	"{dodgerblue}Não sabe como este modo funciona? Digite {lightblue}!slender{dodgerblue} na janela de conversa para abrir o menu principal."
-	}
-
 	"SF2 Welcome Message"
 	{
 		"en"	"{dodgerblue}Welcome to {lightblue}Slender Fortress{dodgerblue}! If you are new to this gamemode, access the main menu by typing {lightblue}!slender{dodgerblue} in chat."
