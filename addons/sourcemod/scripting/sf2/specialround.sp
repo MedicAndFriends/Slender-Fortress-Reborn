@@ -740,17 +740,17 @@ void SpecialRoundStart()
 		}
 		case SPECIALROUND_INSANEDIFFICULTY:
 		{
-			if (g_DifficultyConVar.IntValue < 3)
+			if (g_DifficultyConVar.IntValue < 4)
 			{
-				g_DifficultyConVar.SetString("3"); // Override difficulty to Insane.
+				g_DifficultyConVar.SetString("0"); // Override difficulty to Easy (difficutly modifier is 14.0, apollyon is only 5.5).
 			}
 			SF_AddSpecialRound(SPECIALROUND_INSANEDIFFICULTY);
 		}
 		case SPECIALROUND_NOGRACE:
 		{
-			if (g_DifficultyConVar.IntValue < 2)
+			if (g_DifficultyConVar.IntValue < 6)
 			{
-				g_DifficultyConVar.SetString("2"); // Override difficulty to Hardcore.
+				g_DifficultyConVar.SetString("4"); // Override difficulty to Nightmare.
 			}
 			if (g_RoundGraceTimer != null)
 			{
@@ -760,9 +760,9 @@ void SpecialRoundStart()
 		}
 		case SPECIALROUND_ESCAPETICKETS:
 		{
-			if (g_DifficultyConVar.IntValue < 3)
+			if (g_DifficultyConVar.IntValue < 6)
 			{
-				g_DifficultyConVar.SetString("3"); // Override difficulty to Insane.
+				g_DifficultyConVar.SetString("5"); // Override difficulty to Apollyon.
 			}
 			if (g_RoundGraceTimer != null)
 			{

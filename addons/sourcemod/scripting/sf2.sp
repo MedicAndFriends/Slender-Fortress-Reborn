@@ -42,7 +42,7 @@ bool steamworks;
 #define TFTeam_Blue 3
 #define TFTeam_Boss 5
 
-#define MAXTF2PLAYERS 36
+#define MAXTF2PLAYERS 64
 
 public Plugin myinfo =
 {
@@ -4317,7 +4317,7 @@ stock int GetOppositeTeamOf(int client)
 	return GetOppositeTeam(team);
 }
 
-void SetClientPlayState(int client, bool state, bool enablePlay=true)
+void SetClientPlayState(int client, bool state, bool enablePlay=true) // Pouzite pri startnuti kola aby nebol v ghostmodu v RED a pri ozyvani hrace po smrti ked je eliminovany v red
 {
 	Handle message = StartMessageAll("PlayerTauntSoundLoopEnd", USERMSG_RELIABLE);
 	BfWriteByte(message, client);
@@ -5815,7 +5815,7 @@ int GetClientForDeath(int exclude1, int exclude2 = 0)
 	return -1;
 }
 
-Action Timer_ToggleGhostModeCommand(Handle timer, any userid)
+Action Timer_ToggleGhostModeCommand(Handle timer, any userid) //Toggle ghost mode for a player. Used for the "sf2_ghostmode" command. SAAAATANAAAAAA
 {
 	if (!g_Enabled)
 	{
@@ -5839,7 +5839,7 @@ Action Timer_ToggleGhostModeCommand(Handle timer, any userid)
 		ClientSetGhostModeState(client, true);
 		HandlePlayerHUD(client);
 		TF2_AddCondition(client, TFCond_StealthedUserBuffFade, -1.0);
-
+        
 		CPrintToChat(client, "{dodgerblue}%T", "SF2 Ghost Mode Enabled", client);
 	}
 

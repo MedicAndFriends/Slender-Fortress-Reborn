@@ -16,7 +16,7 @@
 #define SF2_PLAYER_BREATH_COOLDOWN_MIN 0.8
 #define SF2_PLAYER_BREATH_COOLDOWN_MAX 2.0
 
-#define SF2_FLASHLIGHT_WIDTH 512.0 // How wide the player's Flashlight should be in world units.
+#define SF2_FLASHLIGHT_WIDTH 1024.0 // How wide the player's Flashlight should be in world units. It was originally 512, but I increased it for better visibility. Feel free to change it if you want.
 #define SF2_FLASHLIGHT_BRIGHTNESS 0 // Intensity of the players' Flashlight.
 #define SF2_FLASHLIGHT_DRAIN_RATE 0.65 // How long (in seconds) each bar on the player's Flashlight meter lasts.
 #define SF2_FLASHLIGHT_RECHARGE_RATE 0.68 // How long (in seconds) it takes each bar on the player's Flashlight meter to recharge.
@@ -2759,6 +2759,7 @@ void ClientSetGhostModeState(int client, bool state)
 
 		//Set player's old class as desired class.
 		SetEntProp(client, Prop_Send, "m_iDesiredPlayerClass", desiredClass);
+        
 
 		ClientHandleGhostMode(client, true);
 		if (g_GhostModeConnectionCheckConVar.BoolValue)
@@ -2910,7 +2911,7 @@ void ClientHandleGhostMode(int client, bool forceSpawn=false)
 		SetEntProp(client, Prop_Send, "m_usSolidFlags", 4);
 		SetEntProp(client, Prop_Data, "m_nSolidType", 0);
 		SetEntPropEnt(client, Prop_Send, "m_hGroundEntity", -1);
-		SetEntProp(client, Prop_Send, "m_CollisionGroup", COLLISION_GROUP_DEBRIS_TRIGGER);
+		SetEntProp(client, Prop_Send, "m_CollisionGroup", COLLISION_GROUP_DEBRIS); //changed from debris trigger to debris to prevent players from getting stuck in each other.
 		SetEntityFlags(client, GetEntityFlags(client) | FL_NOTARGET);
 		SetEntityRenderMode(client, RENDER_TRANSCOLOR);
 		SetEntityRenderColor(client, _, _, _, 0);

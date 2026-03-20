@@ -17,7 +17,7 @@
 #define MAX_CLASSES 9
 
 // Difficulty modifiers.
-#define DIFFICULTYMODIFIER_EASY 0.75
+#define DIFFICULTYMODIFIER_EASY 14.0 //It was 0.5 before, but I changed it to 14.0 to make the special rounds that override difficulty to Easy more impactful, as the normal modifier for Easy is too low for them to be impactful.
 #define DIFFICULTYMODIFIER_NORMAL 1.0
 #define DIFFICULTYMODIFIER_HARD 1.1
 #define DIFFICULTYMODIFIER_INSANE 1.35
