@@ -80,10 +80,6 @@ void SetupMenus()
 	SetMenuTitle(g_MenuHelpObjective2, "%t%t\n \n%t\n \n", "SF2 Prefix", "SF2 Help Objective Menu Title", "SF2 Help Objective Description 2");
 	AddMenuItem(g_MenuHelpObjective2, "0", "Back");
 
-	g_MenuHelpCommands = CreateMenu(Menu_BackButtonOnly);
-	SetMenuTitle(g_MenuHelpCommands, "%t%t\n \n%t\n \n", "SF2 Prefix", "SF2 Help Commands Menu Title", "SF2 Help Commands Description");
-	AddMenuItem(g_MenuHelpCommands, "0", "Back");
-
 	g_MenuHelpGhostMode = CreateMenu(Menu_BackButtonOnly);
 	SetMenuTitle(g_MenuHelpGhostMode, "%t%t\n \n%t\n \n", "SF2 Prefix", "SF2 Help Ghost Mode Menu Title", "SF2 Help Ghost Mode Description");
 	AddMenuItem(g_MenuHelpGhostMode, "0", "Back");
